@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1> Temperature Converter</h1>
+
+    <label>Enter Temperature</label>
+    <input type="number" id="temperature" placeholder="Enter value">
+
+    <label>Select Unit</label>
+    <select id="unit">
+        <option value="C">Celsius (°C)</option>
+        <option value="F">Fahrenheit (°F)</option>
+        <option value="K">Kelvin (K)</option>
+    </select>
+
+    <button onclick="convertTemperature()">Convert</button>
+
+    <div id="error"></div>
+
+    <div class="result">
+        <h2>Result</h2>
+
+        <p>Celsius: <span id="celsius">--</span> °C</p>
+        <p>Fahrenheit: <span id="fahrenheit">--</span> °F</p>
+        <p>Kelvin: <span id="kelvin">--</span> K</p>
+    </div>
+
+</div>
+
+<script>
+async function convertTemperature() {
+
+    const temperature = document.getElementById("temperature").value;
+    const unit = document.getElementById("unit").value;
+
+    const error = document.getElementById("error");
+
+    error.innerHTML = "";
+
+    if (temperature === "") {
+        error.innerHTML = "Please enter a temperature.";
+        return;
+    }
+
+    try {
+        const response = await fetch("/convert", {
+            method: "POST",
+
+            headers: {
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify({
+                value: temperature,
+                unit: unit
+            })
+        });
+
+        const data = await response.json();
+
+        if (data.error) {
+            error.innerHTML = data.error;
+            return;
+        }
+
+        document.getElementById("celsius").innerText = data.celsius;
+        document.getElementById("fahrenheit").innerText = data.fahrenheit;
+        document.getElementById("kelvin").innerText = data.kelvin;
+
+    } catch (error) {
+        document.getElementById("error").innerHTML =
+            "Unable to connect to Python server.";
+    }
+}
+</script>
+
+</body>
+</html>

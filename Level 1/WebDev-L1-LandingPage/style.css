@@ -1,0 +1,351 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+    background-color: #f5f7fb;
+    line-height: 1.6;
+}
+
+
+/* NAVIGATION */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background-color: #1e3a8a;
+    color: white;
+
+    padding: 15px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    font-size: 25px;
+}
+
+
+/* NAVIGATION LINKS */
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* FIRST PAGE / HERO */
+
+.hero {
+    min-height: 90vh;
+
+    background-color: #dbeafe;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    color: #1e3a8a;
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    max-width: 700px;
+}
+
+
+/* BUTTON */
+
+.btn {
+    display: inline-block;
+
+    background-color: #1e3a8a;
+    color: white;
+
+    padding: 13px 28px;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    font-size: 17px;
+
+    border: none;
+
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #142b68;
+}
+
+
+/* SERVICES PAGE */
+
+.services-page {
+    min-height: 90vh;
+
+    background-color: #f5f7fb;
+
+    text-align: center;
+
+    padding: 70px 20px;
+}
+
+.services-page h1 {
+    color: #1e3a8a;
+
+    font-size: 42px;
+
+    margin-bottom: 15px;
+}
+
+.services-page > p {
+    font-size: 19px;
+
+    margin-bottom: 40px;
+}
+
+
+/* CARDS */
+
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+}
+
+.card {
+    background-color: white;
+
+    padding: 35px 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    color: #1e3a8a;
+
+    margin-bottom: 15px;
+}
+
+.card p {
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+}
+
+
+/* BACK LINK */
+
+.back {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    color: #1e3a8a;
+
+    font-size: 18px;
+
+    text-decoration: none;
+}
+
+.back:hover {
+    text-decoration: underline;
+}
+
+
+/* DETAIL PAGES */
+
+.detail-page {
+    min-height: 90vh;
+
+    background-color: #f5f7fb;
+
+    text-align: center;
+
+    padding: 70px 20px;
+}
+
+.detail-page h1 {
+    color: #1e3a8a;
+
+    font-size: 45px;
+
+    margin-bottom: 20px;
+}
+
+.detail-page > p {
+    max-width: 750px;
+
+    margin: 0 auto 40px;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+.detail-page h2 {
+    color: #1e3a8a;
+
+    margin-bottom: 25px;
+}
+
+
+/* INFORMATION */
+
+.info {
+    background-color: white;
+
+    max-width: 650px;
+
+    margin: 15px auto;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+
+    text-align: left;
+}
+
+.info h3 {
+    color: #1e3a8a;
+
+    margin-bottom: 10px;
+}
+
+.info p {
+    line-height: 1.6;
+}
+
+.detail-page .btn {
+    margin-top: 25px;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #1e3a8a;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px 20px;
+}
+
+footer a {
+    color: white;
+
+    margin: 0 10px;
+
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    nav {
+        padding: 15px 5%;
+    }
+
+    nav a {
+        margin-left: 10px;
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .services-page h1 {
+        font-size: 34px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+    }
+
+    .detail-page h1 {
+        font-size: 36px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        margin: 0 5px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 11px 22px;
+        font-size: 16px;
+    }
+}
