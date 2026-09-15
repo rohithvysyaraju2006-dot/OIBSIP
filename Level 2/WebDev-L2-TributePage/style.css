@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f1ea;
+    color: #263238;
+    line-height: 1.8;
+}
+
+.hero {
+    min-height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #17324d, #28666e);
+    color: white;
+}
+
+.hero-content h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 52px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 21px;
+    letter-spacing: 1px;
+}
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+section {
+    padding: 70px 30px;
+    margin: 35px 0;
+    border-radius: 18px;
+}
+
+h2 {
+    font-family: 'Merriweather', serif;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #17324d;
+}
+
+.image-section {
+    text-align: center;
+    background-color: white;
+}
+
+.image-section img {
+    width: 300px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 8px solid #e6d7b8;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+}
+
+.image-section p {
+    margin-top: 20px;
+    font-style: italic;
+}
+
+.biography {
+    background-color: #e8f1f2;
+}
+
+.biography p {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.timeline {
+    background-color: #fff8e7;
+}
+
+.timeline-card {
+    background-color: white;
+    margin: 20px auto;
+    padding: 25px;
+    max-width: 850px;
+    border-left: 6px solid #28666e;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.timeline-card h3 {
+    font-family: 'Merriweather', serif;
+    color: #28666e;
+    margin-bottom: 8px;
+}
+
+.quote-section {
+    background-color: #17324d;
+    color: white;
+    text-align: center;
+}
+
+.quote-section h2 {
+    color: white;
+}
+
+blockquote {
+    max-width: 800px;
+    margin: auto;
+    padding: 30px;
+    font-family: 'Merriweather', serif;
+    font-size: 24px;
+    font-style: italic;
+    border-left: 5px solid #e6d7b8;
+}
+
+.quote-author {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.legacy {
+    background-color: #f0e6d2;
+}
+
+.legacy p {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 35px 20px;
+    background-color: #263238;
+    color: white;
+}
+
+footer p {
+    margin: 5px;
+}
+
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: 350px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 17px;
+    }
+
+    section {
+        padding: 45px 20px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .image-section img {
+        width: 240px;
+        height: 310px;
+    }
+
+    blockquote {
+        font-size: 19px;
+    }
+
+    .biography p {
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hero-content h1 {
+        font-size: 29px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    main {
+        width: 95%;
+    }
+
+    section {
+        margin: 20px 0;
+        padding: 35px 15px;
+    }
+
+    .timeline-card {
+        padding: 20px;
+    }
+}
